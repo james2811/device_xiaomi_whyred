@@ -204,6 +204,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
