@@ -8,17 +8,13 @@
     <!-- Category Title -->
     <string name="display_title">Display</string>
     <string name="vibration_title">Vibration Controller</string>
-    <string name="torch_title">Torch</string>
     <string name="audio_title">Audio</string>
 
     <!-- Audio amplification -->
     <string name="headphone_gain">Headphone gain</string>
     <string name="microphone_gain">Microphone gain</string>
 
-    <!-- Torch -->
-    <string name="torch_brightness_title">Brightness</string>
-
-    <!-- Vibrator -->
+       <!-- Vibrator -->
     <string name="vibration_strength_title">Strength</string>
 
     <!-- kcal -->
