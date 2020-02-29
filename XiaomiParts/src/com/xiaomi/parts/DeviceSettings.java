@@ -58,10 +58,14 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 
+    private static Context mContext;
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.xiaomiparts_preferences, rootKey);
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+
+        mContext = this.getContext();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
 
         VibrationSeekBarPreference vibrationStrength = (VibrationSeekBarPreference) findPreference(PREF_VIBRATION_STRENGTH);
         vibrationStrength.setEnabled(FileUtils.fileWritable(VIBRATION_STRENGTH_PATH));
@@ -183,6 +187,7 @@ public class DeviceSettings extends PreferenceFragment implements
                     DiracService.sDiracUtils.setLevel(String.valueOf(value));
                 }
                 break;
+
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
