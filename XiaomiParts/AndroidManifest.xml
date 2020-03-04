@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaomi.parts"
     android:sharedUserId="android.uid.system">
@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
 
     <uses-sdk android:minSdkVersion="28" />
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+    <protected-broadcast android:name="com.xiaomi.parts.CUST_UPDATE" />
 
     <application
         android:label="@string/xiaomiparts_title"
@@ -61,6 +64,18 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.xiaomi.parts.ambient.SensorsDozeService"
+                 android:permission="SensorsDozeService">
+        </service>
+
+        <activity
+            android:name="com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity"
+            android:label="@string/ambient_display_gestures_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
         </activity>
 

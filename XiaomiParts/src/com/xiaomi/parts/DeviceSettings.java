@@ -10,6 +10,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 
 import com.xiaomi.parts.kcal.KCalSettingsActivity;
+import com.xiaomi.parts.ambient.AmbientGesturePreferenceActivity;
 import com.xiaomi.parts.preferences.SecureSettingListPreference;
 import com.xiaomi.parts.preferences.SecureSettingSwitchPreference;
 import com.xiaomi.parts.preferences.VibrationSeekBarPreference;
@@ -38,6 +39,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String PREF_MICROPHONE_GAIN = "microphone_gain";
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
+
+ private Preference mAmbientPref;
 
    @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -80,11 +83,20 @@ public class DeviceSettings extends PreferenceFragment implements
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
 
         Preference kcal = findPreference(PREF_DEVICE_KCAL);
-
-        kcal.setOnPreferenceClickListener(preference -> {
+ kcal.setOnPreferenceClickListener(preference -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
+        });
+
+mAmbientPref = findPreference("ambient_display_gestures");
+        mAmbientPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getContext(), AmbientGesturePreferenceActivity.class);
+                startActivity(intent);
+                return true;
+            }
         });
     }
 
