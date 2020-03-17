@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.xiaomi.parts;
+package com.xiaomi.parts.tile;
 
 import android.app.ActivityManager;
 import android.content.Intent;

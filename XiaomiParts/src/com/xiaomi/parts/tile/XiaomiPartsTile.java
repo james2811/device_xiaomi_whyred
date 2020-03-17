@@ -1,4 +1,4 @@
-package com.xiaomi.parts;
+package com.xiaomi.parts.tile;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
