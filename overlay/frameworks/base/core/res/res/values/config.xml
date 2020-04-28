@@ -576,4 +576,69 @@
     <!-- Whether to artificially interpret all signal strengths as
          one bar higher than they actually are -->
     <bool name="config_inflateSignalStrength">true</bool>
+
+    <!-- Enable Smart charging. -->
+    <bool name="config_deviceSupportSmartCharging">true</bool>
+
+    <!-- Keycodes of gestures. If the gesture is not supported set it to 0. -->
+    <integer name="config_doubleTapKeyCode">143</integer>
+
+    <!-- Whether to intercept inputs on screen off -->
+    <bool name="config_enableKeyHandler">true</bool>
+
+    <!-- Default settings for gestures
+            0 - Disabled
+            1 - Wake device
+            2 - Toggle flashlight
+            3 - Toggle airplane mode
+            4 - Play/Pause music
+            5 - Next music
+            6 - Previous music
+            7 - Open camera
+            8 - Open dialer -->
+    <integer name="config_doubleTapDefault">1</integer>
+
+    <!-- If true, the camera will be used more often. -->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Control whether the always on display mode is enabled by default. This value will be used
+         during initialization when the setting is still null. -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/battery_charging_enabled</string>
+    <string name="config_SmartChargingSupspendValue" translatable="false">0</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+
+    <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+    <bool name="config_smart_replies_in_notifications_requires_targeting_p">true</bool>
+
+    <!-- SystemInfo Sys Nodes -->
+    <integer name="config_sysBatteryTempMultiplier">10</integer>
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
+    <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
+    <string name="config_sysGPUFreq">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>
+
+    <!-- The list of components which should be automatically disabled for a specific device. -->
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
+        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+    </string-array>
+
+    <!-- Whether or not to use intelligent profiles -->
+    <bool name="config_intelligent_performance_profile">true</bool>
+
+    <!-- Initially set all to balanced with persist.spectrum.profile=0
+    For example if you want to change performance profile from balanced to performance (in my case performance profile is persist.spectrum.profile=1 )
+    then set <string name="config_performance_profile" translatable="false">1</string>, override these config via device tree.
+    -->
+    <string name="config_balanced_profile" translatable="false">0</string>
+    <string name="config_performance_profile" translatable="false">1</string>
+    <string name="config_powersave_profile" translatable="false">2</string>
+    <string name="config_screen_off_profile" translatable="false">2</string>
 </resources>
