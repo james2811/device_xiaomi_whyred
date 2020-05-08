@@ -57,8 +57,13 @@ void property_override(char const prop[], char const value[])
 
 static void init_setup_model_properties()
 {
+
     std::ifstream fin;
     std::string buf;
+
+    // fingerprint
+    property_override("ro.build.description", "coral-user 10 QQ2A.200501.001.B2 6352890 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
 
     fin.open("/proc/cmdline");
     while (std::getline(fin, buf, ' '))
