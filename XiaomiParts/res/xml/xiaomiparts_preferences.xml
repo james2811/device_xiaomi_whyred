@@ -22,14 +22,6 @@
             android:icon="@drawable/ic_mic"
             android:title="@string/microphone_gain"/>
 
-        <com.xiaomi.parts.preferences.CustomSeekBarPreference 
-            android:defaultValue="0"
-            android:key="speaker_gain" 
-            android:max="20"
-            app:min="-10" 
-            android:icon="@drawable/ic_speaker"
-            android:title="@string/speaker_gain" />
-
         <com.xiaomi.parts.preferences.SecureSettingSwitchPreference
             android:defaultValue="false"
             android:key="dirac_enabled"

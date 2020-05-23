@@ -46,8 +46,6 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String PREF_MICROPHONE_GAIN = "microphone_gain";
     public static final  String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
     public static final  String MICROPHONE_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
-    public static final  String PREF_SPEAKER_GAIN = "speaker_gain";
-    public static final  String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
     public static final  String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final  String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
@@ -59,8 +57,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
-
-    private CustomSeekBarPreference mSpeakerGain;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -78,9 +74,6 @@ public class DeviceSettings extends PreferenceFragment implements
         CustomSeekBarPreference microphone_gain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         microphone_gain.setEnabled(FileUtils.fileWritable(MICROPHONE_GAIN_PATH));
         microphone_gain.setOnPreferenceChangeListener(this);
-
-        mSpeakerGain = (CustomSeekBarPreference) findPreference(PREF_SPEAKER_GAIN);
-        mSpeakerGain.setOnPreferenceChangeListener(this);
 
         CustomSeekBarPreference torch_brightness = (CustomSeekBarPreference) findPreference(PREF_TORCH_BRIGHTNESS);
         torch_brightness.setEnabled(FileUtils.fileWritable(TORCH_1_BRIGHTNESS_PATH) &&
@@ -162,10 +155,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
             case PREF_MICROPHONE_GAIN:
                 FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
-                break;
-
-            case PREF_SPEAKER_GAIN:
-                 FileUtils.setValue(SPEAKER_GAIN_PATH, (int) value);
                 break;
 
             case PREF_ENABLE_DIRAC:
