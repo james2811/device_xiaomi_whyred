@@ -60,6 +60,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_USB_FASTCHARGE = "fastcharge";
     public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 
+    public static final String PREF_SPECTRUM = "spectrum";
+    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+
     private CustomSeekBarPreference mSpeakerGain;
 
     @Override

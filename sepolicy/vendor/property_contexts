@@ -51,3 +51,6 @@ gpu.stats.debug.level                   u:object_r:vendor_default_prop:s0
 
 # Fix for WLAN tethering offload
 wifi.active.interface                   u:object_r:exported_wifi_prop:s0
+
+# Spectrum
+persist.spectrum.profile                u:object_r:spectrum_prop:s0

@@ -10,7 +10,8 @@ allow system_app sysfs_vibrator:dir search;
 
 allow system_app sysfs_zram:dir { search };
 allow system_app sysfs_zram:file { read open };
-
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
 allow system_app sysfs_kgsl:lnk_file read;
 allow system_app sysfs_kgsl:dir { search };
 
@@ -31,4 +32,4 @@ allow system_app sysfs_micgain:file { open read getattr write };
 allow system_app sysfs_leds:dir search;
 allow system_app sysfs_torch:file { open getattr write };
 allow system_app sysfs_fastcharge:file { open read getattr write };
-
+allow system_app spectrum_prop:property_service set;

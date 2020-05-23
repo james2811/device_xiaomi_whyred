@@ -398,7 +398,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
     fstab.qcom \
-    init.qti.can.sh
+    init.qti.can.sh \
+    init.spectrum.rc \
+    init.spectrum.sh
 
 # RCS
 PRODUCT_PACKAGES += \
