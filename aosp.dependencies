@@ -1,0 +1,22 @@
+[
+  {
+    "repository": "android_kernel_xiaomi_whyred",
+    "target_path": "kernel/xiaomi/whyred",
+    "branch": "kernel-hmp"
+  },
+  {
+    "repository": "atom_vendor_xiaomi_whyred",
+    "target_path": "vendor/xiaomi/whyred",
+    "branch": "atom"
+  },
+  {
+    "repository": "vendor_dirac",
+    "target_path": "vendor/dirac",
+    "branch": "ten",
+  }
+  {
+    "repository": "vendor_MiuiCamera",
+    "target_path": "vendor/MiuiCamera",
+    "branch": "ten",
+  }
+]
