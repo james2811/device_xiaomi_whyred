@@ -12,10 +12,6 @@
     <string name="torch_category">Torch</string>
     <string name="vibration_category">Vibration</string>
 
-    <!-- Audio amplification -->
-    <string name="headphone_gain">Headphone gain</string>
-    <string name="microphone_gain">Microphone gain</string>
-
     <!-- Torch -->
     <string name="torch_brightness_title">Brightness</string>
 
@@ -25,18 +21,6 @@
 
     <!-- Vibrator -->
     <string name="vibration_strength_title">Strength</string>
-
-    <!-- Spectrum Profiles -->
-    <string name="spectrum_profile_title">Spectrum</string>
-    <string name="spectrum_title">Spectrum Profiles</string>
-    <string name="spectrum_summary">Choose your Spectrum Profiles</string>
-    <string name="spectrum_dialogTitle">Choose your Spectrum Profiles</string>
-
-    <!-- Values for Spectrum Presets -->
-    <string name="spectrum_performance">Performance</string>
-    <string name="spectrum_battery">Battery</string>
-    <string name="spectrum_gaming">Gaming</string>
-    <string name="spectrum_balance">Balance</string>
 
     <!-- Dirac settings -->
     <string name="dirac_title">Mi Sound Enhancer</string>
@@ -175,11 +159,6 @@
     <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
     <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
     <string name="touchscreen_gesture_action_wake_device">Wake device</string>
-
-    <!-- Log Tile -->
-    <string name="quick_settings_log_tile_label">LogTile</string>
-    <string name="quick_settings_log_tile_dialog_title">Options</string>
-    <string name="cannot_get_su">Action failed because of missing superuser access</string>
 
     <!-- FPS Info -->
     <string name="fps_info_title">FPS Info Overlay</string>
