@@ -162,10 +162,6 @@
     <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
     <string name="touchscreen_gesture_action_wake_device">Wake device</string>
 
-    <!-- FPS Info -->
-    <string name="fps_info_title">FPS Info Overlay</string>
-    <string name="fps_info_summary">Show overlay with current frames per second</string>
-
     <!-- Ambient gesture haptic feedback -->
     <string name="ambient_gesture_haptic_feedback">Haptic feedback</string>
     <string name="ambient_gesture_haptic_feedback_summary">Vibrate when a Ambient gesture is detected</string>
